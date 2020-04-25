@@ -5,10 +5,16 @@
 }
 
 body{
-	font-family: Arial, sans-serif;
+	font-family: 'Indie Flower', curvive, sans-serif;
 	background-image: url('../images/background.jpg');
+	font-size: 200px;
 }
-
+span{
+	font-weight: bold;
+}
+p{
+	font-weight:50;
+}
 /* Header */
 
 
