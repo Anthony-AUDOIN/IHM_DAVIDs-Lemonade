@@ -1,5 +1,8 @@
 /* General */
-
+@font-face {
+	src: url(lemonade_font.ttf);
+	font-family: nosifer;
+}
 *{
 
 }
@@ -14,6 +17,7 @@ span{
 }
 p{
 	font-weight:50;
+	font-family : nosifer;
 }
 /* Header */
 
