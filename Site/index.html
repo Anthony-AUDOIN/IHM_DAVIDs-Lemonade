@@ -10,41 +10,74 @@
 
 <body>
 	<header>
+		<!-- Navgation -->
 		<nav>
-			<a href="#Contact">Contact</a>
-			<a href="#AboutUs">À propos</a>
-			<a href="#Help">Aide</a>
-			<a href="#Agriculteur">Nos agriculteur</a>
-			<a href="#History">Notre histoire</a>
+			<a href="#landing">
+				<img src="./images/logovertical.png" alt="Logo">
+			</a>
+			<a href="#Contact" class="navbutton">Contact</a>
+			<a href="#AboutUs" class="navbutton">À propos</a>
+			<a href="#Help" class="navbutton">Aide</a>
+			<a href="#Agriculteur" class="navbutton">Nos agriculteur</a>
+			<a href="#History" class="navbutton">Notre histoire</a>
         </nav>
 	</header>
 	<main>
 		<div id="content">
+			<div id="landing">
+				<img src="./images/logo.png" alt="Logo">
+				<p>Slogan</p>
+				<a href="#formulaire">Participez ici</a>
+			</div>
+
 			<!-- Notre Citronade -->
 			<div id="citronade">
-
+				<h2>Notre Citronade</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
+				<img src="./images/noscitronades.png" alt="nos_citronades">
 			</div>
 			<!-- Production -->
 			<div id="production">
-
+				<h2>Procéder de production</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
+				<img src="./images/production.png" alt="notre_production">
 			</div>
 			<!-- Qui sommes-nous ?-->
 			<div id="qsm">
-
+				<h2>Qui sommes-nous ?</h2>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
+				<img src="./images/carte.png" alt="carte">
 			</div>
 			<!-- Labels -->
 			<div id="labels">
-
+				<img src="./images/label1.png" alt="label1">
+				<img src="./images/label2.png" alt="label2">
 			</div>
 			
 			<!-- Formulaire -->
 			<div id="formulaire">
-
+				<form>
+					<select name="Evenements">
+						<option value="op1">option1</option>
+						<option value="op2">option2</option>
+					</select>
+					<label for="nom">Nom:</label><br>
+					<input type="text" id="nom" name="nom"><br>
+					<label for="prénom">Prénom:</label><br>
+					<input type="text" id="prénom" name="prénom"><br>
+					<label for="email">Email:</label><br>
+					<input type="text" id="email" name="email"><br>
+					<label for="tel">Téléphone:</label><br>
+					<input type="text" id="tel" name="tel"><br>
+					<input type="checkbox" name="check_cg" id="cg" value="cg" /><label for="track">J'accepte les conditions générales</label><br/>
+					<input type="checkbox" name="check_notif" id="newsletter" value="newsletter" /><label for="track">J'accepte recevoir des informations pour les évenements à venir</label><br/>
+					<input type="submit" value="Valider">
+				</form>
 			</div>
 		</div>
 	</main>
 	<footer>
-
+		<p>test</p>
 	</footer>
 </body>
 </html>
