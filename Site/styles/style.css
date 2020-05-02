@@ -25,6 +25,8 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li, tabl
 body {
 	font-family: 'Indie Flower', curvive, sans-serif;
 	background-image: url('../images/background.jpg');
+	background-size:100%;
+	background-repeat: no-repeat;
 }
 
 #content {
@@ -79,8 +81,15 @@ nav img {
 
 #logo {
 	display: block;
-	margin: 50px auto 0px auto;
+	margin: auto;
+	margin-top: 50px;
 	width: 25%;
+}
+
+#centerButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #bouton {
@@ -90,13 +99,12 @@ nav img {
 	border-radius: 8px;
 	background-color: rgba(238, 234, 176, 0.548);
 	opacity: 0.8;
-	margin-left: 42%;
 	padding: 12.5px 10px 12.5px 10px;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 	transition: 0.3s;
 	font-size: 50px;
 	font-weight: bold;
-	width: 15%;
+	width: 22%;
 }
 
 #bouton:hover {
@@ -104,8 +112,9 @@ nav img {
 }
 
 #landing p {
-	margin: 10px 0px 60px 25%;
+	margin: 20px;
 	font-size: 50px;
+	text-align: center;
 }
 
 #fleches {
@@ -143,4 +152,18 @@ footer {
 	background-color: rgba(238, 234, 176, 0.548);
 	width: 100%;
 	color: black;
+}
+
+/* Tablette */
+
+@media screen and (max-width: 1024px) 
+{
+	
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) 
+{
+	
 }
