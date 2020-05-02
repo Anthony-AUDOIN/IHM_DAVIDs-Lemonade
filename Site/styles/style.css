@@ -25,6 +25,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li, tabl
 body {
 	font-family: 'Indie Flower', curvive, sans-serif;
 	background-image: url('../images/background.jpg');
+	background-size: 100%;
 }
 
 #content {
@@ -84,6 +85,9 @@ nav img {
 }
 
 #bouton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: black;
 	text-decoration: none;
 	border: 3px solid orange;
@@ -131,9 +135,79 @@ nav img {
 
 /* Notre citronade */
 
+#citronade h2 {
+	margin: 17% 0px 15px 23%;
+	font-size: 45px;
+}
+
+#citronade img {
+	clear: both;
+	width: 30%;
+	float: right;
+	border-radius: 8px;
+	margin-right: 12%;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+}
+
+#citronade p {
+	width: 40%;
+	font-size: 20px;
+	margin-left: 12%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+
 /* Notre production */
 
+#production h2 {
+	clear: both;
+	float: right;
+	font-size: 45px;
+	margin-right: 21%;
+	margin-top: 8%;
+}
+
+#production p {
+	clear: both;
+	float: right;
+	width: 40%;
+	font-size: 20px;
+	margin-right: 12%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#production img {
+	border-radius: 8px;
+	width: 30%;
+	margin-left: 12%;
+	margin-top: 19%;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+}
+
 /* Qui sommes-nous */
+
+#qsm h2 {
+	margin: 5% 0px 15px 23%;
+	font-size: 45px;
+}
+
+#qsm p {
+	width: 40%;
+	font-size: 20px;
+	margin-left: 12%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#qsm iframe {
+	clear: both;
+	float: right;
+	margin-right: 12%;
+	border-radius: 8px;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+}
 
 /* Formulaire */
 
@@ -143,4 +217,18 @@ footer {
 	background-color: rgba(238, 234, 176, 0.548);
 	width: 100%;
 	color: black;
+}
+
+/* Tablette */
+
+@media screen and (max-width: 1024px) 
+{
+
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) 
+{
+
 }
