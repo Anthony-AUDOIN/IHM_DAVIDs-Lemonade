@@ -38,10 +38,10 @@ p {
 }
 
 .center {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,7 +59,7 @@ nav {
 
 nav img {
 	width: 8%;
-	padding: 2px 25px;
+	padding: 15px 25px;
 }
 
 .navbutton {
@@ -215,11 +215,55 @@ nav img {
 	float: right;
 	margin-right: 12%;
 	border-radius: 8px;
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+}
+
+#labels img{
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 10%;
 }
 
 /* Formulaire */
 
+#formulaire{
+	text-align: center;
+}
+
+form{
+	margin: 60px 0 20px 0;
+}
+
+label{
+	font-weight: bold;
+	font-size: 20px;
+	margin-right: 10px;
+	color: #777;
+}
+
+input[type="text"], input[type="email"], select{
+	padding: 10px;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+}
+
+#buttonOK{
+	color: #FFF;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 11px;
+	margin-top: 10px;
+	background-color: #FFA500;
+	border-style:none;
+	border-radius: 20px;
+}
+
+input #newletter{
+	padding-top: 15px;
+}
 /* Footer */
 
 footer {

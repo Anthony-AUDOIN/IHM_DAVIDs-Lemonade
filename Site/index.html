@@ -20,7 +20,7 @@
 			<a href="#Help" class="navbutton">Aide</a>
 			<a href="#Agriculteur" class="navbutton">Nos agriculteurs</a>
 			<a href="#History" class="navbutton">Notre histoire</a>
-        </nav>
+		</nav>
 	</header>
 	<main>
 		<div id="content">
@@ -54,27 +54,54 @@
 				<h2>Qui sommes-nous ?</h2>
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
 			</div>
-			<img src="./images/label1.png" alt="label1">
-			<img src="./images/label2.png" alt="label2">
-
+			<div id="labels">
+				<!-- <img src="./images/label1.png" alt="label1"> -->
+				<img src="./images/label2.png" alt="label2">
+			</div>
 			<!-- Formulaire -->
 			<div id="formulaire">
 				<form>
-					<select name="Evenements">
-						<option value="op1">option1</option>
-						<option value="op2">option2</option>
+					<label for="evenement">Evenements :</label>
+					<select name="Evenements" required title="Evenements">
+						<option value="">Choississez votre lieux</option>
+						<option value="op1">AMAP les Grand’Goules</option>
+						<option value="op2">AMAP Bio des 2 rives</option>
+						<option value="op3">Amap des Voiliers</option>
+						<option value="op4">Le Pompin'Ambour</option>
+						<option value="op5">AMAP BIO’RILLAC</option>
+						<option value="op6">AMAP</option>
+						<option value="op7">Pensees Bio</option>
+						<option value="op8">Bio & Sens Montpellier - Juvignac</option>
+						<option value="op9">Biossetan</option>
+						<option value="op10">La Canopée </option>
+						<option value="op11">Naturéo </option>
+						<option value="op12">Rayons Verts</option>
+						<option value="op13">BIOMONDE</option>
+						<option value="op14">Bio c' Bon</option>
+						<option value="op15">Les Comptoirs de la Bio</option>
+
 					</select>
-					<label for="nom">Nom:</label><br>
-					<input type="text" id="nom" name="nom"><br>
-					<label for="prénom">Prénom:</label><br>
-					<input type="text" id="prénom" name="prénom"><br>
-					<label for="email">Email:</label><br>
-					<input type="text" id="email" name="email"><br>
-					<label for="tel">Téléphone:</label><br>
-					<input type="text" id="tel" name="tel"><br>
+					<div id="groupnom">
+						<label for="nom">Nom:</label>
+						<input type="text" id="nom" name="nom" placeholder="Votre nom" pattern="[a-zA-Z]*" title="Ecrivez votre nom" required>
+					</div>
+					<div id="groupprenom">
+						<label for="prénom">Prénom:</label>
+						<input type="text" id="prénom" name="prénom" placeholder="Votre prénom" pattern="[a-zA-Z]*" required>
+					</div>
+					<div id="groupemail">
+						<label for="email">Email:</label>
+						<input type="text" id="email" name="email" placeholder="Votre Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+					</div>
+					<div id="grouptel">
+						<label for="tel">Téléphone:</label>
+						<input type="text" id="tel" name="tel" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}">
+					</div>
 					<input type="checkbox" name="check_cg" id="cg" value="cg" /><label for="track">J'accepte les conditions générales</label><br/>
+
 					<input type="checkbox" name="check_notif" id="newsletter" value="newsletter" /><label for="track">J'accepte recevoir des informations pour les évenements à venir</label><br/>
-					<input type="submit" value="Valider">
+
+					<input type="submit" value="Valider" id="buttonOK">
 				</form>
 			</div>
 		</div>
