@@ -25,7 +25,6 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li, tabl
 body {
 	font-family: 'Indie Flower', curvive, sans-serif;
 	background-image: url('../images/background.jpg');
-	background-size: 100%;
 }
 
 #content {
@@ -54,36 +53,54 @@ nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	transition: top 0.3s;
 }
 
-nav img {
-	width: 8%;
-	padding: 15px 25px;
+#navLogo {
+	padding: 15px 0px 5px 25px;
+	width: 17%;
 }
 
 .navbutton {
+	display: none;
+}
+
+#navbar-toggle-cbox {
+    display: none;
+}
+
+#navbar-toggle-cbox + label {
 	float: right;
-	text-align: center;
-	font-size: 23px;
-	padding: 20px 30px;
+	background-image: url('../images/burger.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+    height: 50px;
+	width: 50px;
+	margin-right: 2%;
+}
+
+#navbar-toggle-cbox:checked ~ .sidenav {
+	display: block;
+}
+
+.sidenav {
+	display: none;
+	background-color: rgba(238, 234, 176, 0.548);
+	position: fixed;
+	height: 100%;
+	overflow: hidden;
+}
+
+.sidenav a {
+	display: block;
+	padding: 8px 12px 8px 16px;
 	text-decoration: none;
+	font-size: 22px;
 	color: black;
-	border-bottom: 3px solid transparent;
+	transition: 0.3s;
 }
 
-.navbutton:hover {
-	animation: nav-transparent-border 1.5s;
-	border-bottom: 3px solid rgb(190, 149, 12);
-}
-
-@keyframes nav-transparent-border {
-	0% {
-		border-bottom: 3px solid rgba(190, 148, 12, 0);
-	}
-	100% {
-		border-bottom: 3px solid rgb(190, 149, 12);
-	}
+.sidenav a:hover {
+	color: orange;
 }
 
 /* Landing */
@@ -91,8 +108,8 @@ nav img {
 #logo {
 	display: block;
 	margin: auto;
-	margin-top: 50px;
-	width: 25%;
+	margin-top: 3%;
+	width: 90%;
 }
 
 #bouton {
@@ -103,12 +120,12 @@ nav img {
 	border-radius: 8px;
 	background-color: rgba(238, 234, 176, 0.548);
 	opacity: 0.8;
-	padding: 12.5px 10px 12.5px 10px;
+	padding: 10px;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 	transition: 0.3s;
 	font-size: 50px;
 	font-weight: bold;
-	width: 17%;
+	width: auto;
 }
 
 #bouton:hover {
@@ -117,14 +134,14 @@ nav img {
 
 #landing p {
 	margin: 20px;
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 }
 
 #fleches {
 	display: block;
-	margin: 60px auto 0px auto;
-	width: 3%;
+	margin: 12% auto 0px auto;
+	width: 15%;
 	animation-name: fleches-transparent;
 	animation-duration: 2.75s;
 	animation-iteration-count: infinite;
@@ -144,78 +161,82 @@ nav img {
 
 /* Notre citronade */
 
-#citronade h2 {
-	margin: 17% 0px 15px 23%;
-	font-size: 45px;
+#citronnade h2 {
+	margin: 25% auto 15px;
+	font-size: 8vw;
 }
 
-#citronade img {
-	clear: both;
-	width: 30%;
-	float: right;
+#citronnade img {
+	display: block;
+	width: 85%;
 	border-radius: 8px;
-	margin-right: 12%;
+	margin: 0px auto 4%;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 }
 
-#citronade p {
-	width: 40%;
-	font-size: 20px;
-	margin-left: 12%;
+#citronnade p {
+	width: 90%;
+	margin: auto;
+	font-size: 4.5vw;
 	text-align: justify;
 	text-justify: inter-word;
 }
-
 
 /* Notre production */
 
 #production h2 {
-	clear: both;
-	float: right;
-	font-size: 45px;
-	margin-right: 21%;
-	margin-top: 8%;
-}
-
-#production p {
-	clear: both;
-	float: right;
-	width: 40%;
-	font-size: 20px;
-	margin-right: 12%;
-	text-align: justify;
-	text-justify: inter-word;
+	margin: 15% auto 15px 0px;
+	font-size: 8vw;
 }
 
 #production img {
+	display: block;
+	width: 85%;
 	border-radius: 8px;
-	width: 30%;
-	margin-left: 12%;
-	margin-top: 19%;
+	margin: 0px auto 4%;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+}
+
+#production p {
+	width: 90%;
+	margin: auto;
+	font-size: 4.5vw;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 /* Qui sommes-nous */
 
 #qsm h2 {
-	margin: 5% 0px 15px 23%;
-	font-size: 45px;
+	margin: 15% auto 15px 0px;
+	font-size: 8vw;
 }
 
 #qsm p {
-	width: 40%;
-	font-size: 20px;
-	margin-left: 12%;
+	width: 90%;
+	margin: 4% auto;
+	font-size: 4.5vw;
 	text-align: justify;
 	text-justify: inter-word;
 }
 
-#qsm iframe {
-	clear: both;
-	float: right;
-	margin-right: 12%;
-	border-radius: 8px;
+.iframe-container {
+	overflow: hidden;
+	padding-top: 56.25%;
+	position: relative;
 }
+   
+.iframe-container iframe {
+	border: 0;
+	border-radius: 8px;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+/* Labels */
 
 #labels img{
 	width: 50%;
@@ -225,22 +246,32 @@ nav img {
 
 /* Formulaire */
 
-#formulaire{
+#formulaire {
 	text-align: center;
 }
 
-form{
+form {
 	margin: 60px 0 20px 0;
+	border: 0;
 }
 
-label{
+#titreForm {
+	display: block;
+	font-size: 6vw;
+}
+
+select {
+	color: #777;
+}
+
+label {
 	font-weight: bold;
 	font-size: 20px;
 	margin-right: 10px;
 	color: #777;
 }
 
-input[type="text"], input[type="email"], select{
+input[type="text"], input[type="email"], select {
 	padding: 10px;
 	font-size: 20px;
 	margin-top: 15px;
@@ -250,20 +281,30 @@ input[type="text"], input[type="email"], select{
 	border-radius: 5px;
 }
 
-#buttonOK{
-	color: #FFF;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 11px;
-	margin-top: 10px;
-	background-color: #FFA500;
-	border-style:none;
-	border-radius: 20px;
+#buttonForm {
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	border: 3px solid orange;
+	border-radius: 12px;
+	background-color: rgba(238, 234, 176, 0.548);
+	opacity: 0.8;
+	padding: 12.5px 15px 12.5px 15px;
+	margin-top: 2%;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+	transition: 0.3s;
+	font-size: 4.5vw;
+	width: auto;
 }
 
-input #newletter{
+#buttonForm:hover {
+	opacity: 1;
+}
+
+input #newletter {
 	padding-top: 15px;
 }
+
 /* Footer */
 
 footer {
@@ -272,16 +313,219 @@ footer {
 	color: black;
 }
 
-/* Tablette */
+/*************************************************************************************************/
 
-@media screen and (max-width: 1024px) 
-{
+/* PC */
 
-}
+@media screen and (min-width: 768px) {
 
-/* Mobile */
+	/* Nav bar */
+	#navLogo {
+		width: 8%;
+		padding: 15px 25px 5px;
+	}
 
-@media screen and (max-width: 600px) 
-{
+	.navbutton {
+		display: block;
+		float: right;
+		text-align: center;
+		font-size: 23px;
+		padding: 20px 30px;
+		text-decoration: none;
+		color: black;
+		border-bottom: 3px solid transparent;
+	}
+	
+	.navbutton:hover {
+		animation: nav-transparent-border 1.5s;
+	}
+
+	#navbar-toggle-cbox + label {
+		display: none;
+	}
+	
+	
+	@keyframes nav-transparent-border {
+		0% {
+			border-bottom: 3px solid rgba(190, 148, 12, 0);
+		}
+		100% {
+			border-bottom: 3px solid rgb(190, 149, 12);
+		}
+	}
+
+	/* Landing */
+
+	#logo {
+		width: 25%;
+	}
+
+	#bouton {
+		width: 17%;
+	}
+	
+	#landing p {
+		margin: 20px;
+		font-size: 50px;
+	}
+
+	#fleches {
+		margin: 60px auto 0px auto;
+		width: 3%;
+	}
+
+	/* Nos Citronades */
+
+	#citronnade h2 {
+		display: block;
+		margin: 17% 0px 15px 23%;
+		font-size: 45px;
+	}
+
+	#citronnade img {
+		width: 30%;
+		clear: both;
+		float: right;
+		border-radius: 8px;
+		margin-right: 12%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+	}
+	
+	#citronnade p {
+		width: 40%;
+		font-size: 20px;
+		margin-left: 12%;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+	/* Notre production */
+
+	#production h2 {
+		clear: both;
+		float: right;
+		font-size: 45px;
+		margin-right: 21%;
+		margin-top: 8%;
+	}
+
+	#production p {
+		clear: both;
+		float: right;
+		width: 40%;
+		font-size: 20px;
+		margin-right: 12%;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+	#production img {
+		border-radius: 8px;
+		width: 30%;
+		margin-left: 12%;
+		margin-top: 19%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+	}
+
+	/* Qui sommes-nous */
+
+	#qsm h2 {
+		margin: 5% 0px 15px 23%;
+		font-size: 45px;
+	}
+
+	#qsm p {
+		width: 40%;
+		font-size: 20px;
+		margin-left: 12%;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+	   
+	.iframe-container iframe {
+		clear: both;
+		float: right;
+		margin-right: 12%;
+		border-radius: 8px;
+		width: 57%;
+		height: 57%;
+	}
+
+	/* Labels */
+
+	#labels img{
+		width: 50%;
+		margin-left: 25%;
+		margin-top: 10%;
+	}
+
+	/* Formulaire */
+
+	#formulaire {
+		text-align: center;
+	}
+
+	form {
+		margin: 60px 0 20px 0;
+		border: 0;
+	}
+
+	#titreForm {
+		display: block;
+		font-size: 6vw;
+	}
+
+	select {
+		color: #777;
+	}
+
+	label {
+		font-weight: bold;
+		font-size: 20px;
+		margin-right: 10px;
+		color: #777;
+	}
+
+	input[type="text"], input[type="email"], select {
+		padding: 10px;
+		font-size: 20px;
+		margin-top: 15px;
+		margin-right: 20px;
+		margin-bottom: 15px;
+		border: 2px solid #ddd;
+		border-radius: 5px;
+	}
+
+	#buttonForm {
+		color: black;
+		text-decoration: none;
+		text-align: center;
+		border: 3px solid orange;
+		border-radius: 12px;
+		background-color: rgba(238, 234, 176, 0.548);
+		opacity: 0.8;
+		padding: 12.5px 15px 12.5px 15px;
+		margin-top: 2%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		transition: 0.3s;
+		font-size: 30px;
+		width: auto;
+	}
+
+	#buttonForm:hover {
+		opacity: 1;
+	}
+
+	input #newletter {
+		padding-top: 15px;
+	}
+
+	/* Footer */
+
+	footer {
+		background-color: rgba(238, 234, 176, 0.548);
+		width: 100%;
+		color: black;
+	}
 
 }

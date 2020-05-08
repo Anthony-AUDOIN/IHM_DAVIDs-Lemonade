@@ -13,15 +13,25 @@
 		<!-- Navigation -->
 		<nav>
 			<a href="#content">
-				<img src="./images/logovertical.png" alt="Logo">
+				<img src="./images/logovertical.png" alt="Logo" id="navLogo">
 			</a>
 			<a href="#Contact" class="navbutton">Contact</a>
 			<a href="#AboutUs" class="navbutton">À propos</a>
-			<a href="#Help" class="navbutton">Aide</a>
 			<a href="#Agriculteur" class="navbutton">Nos agriculteurs</a>
 			<a href="#History" class="navbutton">Notre histoire</a>
+			
+			<!-- Navigation Smarphone -->
+			<input type="checkbox" id="navbar-toggle-cbox"/><label for="navbar-toggle-cbox" data-toggle="sidenav" aria-expanded="false"></label>
+			<div class="sidenav">
+				<a href="#History">Notre histoire</a>
+				<a href="#Agriculteur">Nos agriculteurs</a>
+				<a href="#AboutUs">À propos</a>
+				<a href="#Contact">Contact</a>
+			</div>
+
 		</nav>
 	</header>
+
 	<main>
 		<div id="content">
 			<!-- Acceuil -->
@@ -31,27 +41,29 @@
 				<div class="center">
 					<a href="#formulaire" id="bouton">Participez ici</a>
 				</div>
-				<a href="#citronade">
+				<a href="#citronnade">
 					<img src="./images/fleches.png" alt="fleches" id="fleches">
 				</a>
 			</div>
 
-			<!-- Notre Citronade -->
-			<div id="citronade">
-				<img src="./images/noscitronades.png" alt="nos_citronades">
-				<h2>Notre Citronade</h2>
+			<!-- Notre Citronnade -->
+			<div id="citronnade">
+				<h2 class="center">Notre Citronnade</h2>
+				<img src="./images/noscitronnades.png" alt="nos_citronnades">
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
 			</div>
 			<!-- Production -->
 			<div id="production">
-				<h2>Procédé de production</h2>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
+				<h2 class="center">Procédé de production</h2>
 				<img src="./images/production.png" alt="notre_production">
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
 			</div>
 			<!-- Qui sommes-nous ?-->
 			<div id="qsm">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662657.8011352355!2d-2.4344499598606864!3d46.13143484542259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1588445171561!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-				<h2>Qui sommes-nous ?</h2>
+				<h2 class="center">Qui sommes-nous ?</h2>
+				<div class="iframe-container">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662657.8011352355!2d-2.4344499598606864!3d46.13143484542259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1588445171561!5m2!1sfr!2sfr" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
 			</div>
 			<div id="labels">
@@ -61,8 +73,8 @@
 			<!-- Formulaire -->
 			<div id="formulaire">
 				<form>
-					<label for="evenement">Evenements :</label>
-					<select name="Evenements" required title="Evenements">
+					<label for="evenement" id="titreForm">Evenements :</label>
+					<select name="Évenements" required title="Evenements" id="evenement">
 						<option value="">Choississez votre lieux</option>
 						<option value="op1">AMAP les Grand’Goules</option>
 						<option value="op2">AMAP Bio des 2 rives</option>
@@ -79,8 +91,8 @@
 						<option value="op13">BIOMONDE</option>
 						<option value="op14">Bio c' Bon</option>
 						<option value="op15">Les Comptoirs de la Bio</option>
-
 					</select>
+
 					<div id="groupnom">
 						<label for="nom">Nom:</label>
 						<input type="text" id="nom" name="nom" placeholder="Votre nom" pattern="[a-zA-Z]*" title="Ecrivez votre nom" required>
@@ -90,18 +102,18 @@
 						<input type="text" id="prénom" name="prénom" placeholder="Votre prénom" pattern="[a-zA-Z]*" required>
 					</div>
 					<div id="groupemail">
-						<label for="email">Email:</label>
-						<input type="text" id="email" name="email" placeholder="Votre Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+						<label for="email">Émail:</label>
+						<input type="text" id="email" name="email" placeholder="Votre Émail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
 					</div>
 					<div id="grouptel">
 						<label for="tel">Téléphone:</label>
 						<input type="text" id="tel" name="tel" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}">
 					</div>
-					<input type="checkbox" name="check_cg" id="cg" value="cg" /><label for="track">J'accepte les conditions générales</label><br/>
+					<input type="checkbox" name="check_cg" id="cg" value="cg" required><label for="cg">J'accepte les conditions générales</label><br/>
 
-					<input type="checkbox" name="check_notif" id="newsletter" value="newsletter" /><label for="track">J'accepte recevoir des informations pour les évenements à venir</label><br/>
+					<input type="checkbox" name="check_notif" id="newsletter" value="newsletter"><label for="newsletter">J'accepte recevoir des informations pour les évenements à venir</label><br/>
 
-					<input type="submit" value="Valider" id="buttonOK">
+					<input type="submit" value="Valider" id="buttonForm">
 				</form>
 			</div>
 		</div>
