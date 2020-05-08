@@ -33,7 +33,7 @@ body {
 }
 
 p {
-	font-weight: 50;
+	font-weight: bold;
 	font-family: nosifer;
 }
 
@@ -48,48 +48,39 @@ p {
 nav {
 	background-color: rgba(238, 234, 176, 0.548);
 	position: fixed;
-	top: 0;
 	width: 100%;
 }
 
 #navLogo {
 	padding: 15px 0px 5px 25px;
-	width: 17%;
+	width: 25%;
 }
 
 .navbutton {
 	display: none;
 }
 
-#navbar-toggle-cbox {
+#navbar-toggle-cbox{
     display: none;
 }
 
-#navbar-toggle-cbox + label {
+#navbar-toggle-cbox + label img{
 	float: right;
-	background-image: url('../images/burger.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
     height: 50px;
 	width: 50px;
-	margin-right: 2%;
-}
-
-#navbar-toggle-cbox:checked ~ .sidenav {
-	display: block;
 }
 
 .sidenav {
 	display: none;
-	background-color: rgba(238, 234, 176, 0.548);
-	position: fixed;
-	height: 100%;
-	overflow: hidden;
-	padding-top: 15px;
+}
+
+#navbar-toggle-cbox:checked ~ .sidenav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .sidenav a {
-	display: block;
 	padding: 8px 12px 8px 16px;
 	text-decoration: none;
 	font-size: 22px;
@@ -157,14 +148,14 @@ nav {
 	}
 }
 
-/* Notre citronade */
+/* Le saviez-vous */
 
-#citronnade h2 {
-	margin: 25% auto 15px;
+#lesaviezvous h2 {
+	margin: 15% auto 15px 0px;
 	font-size: 8vw;
 }
 
-#citronnade img {
+#lesaviezvous img {
 	display: block;
 	width: 85%;
 	border-radius: 8px;
@@ -172,7 +163,30 @@ nav {
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 }
 
-#citronnade p {
+#lesaviezvous p {
+	width: 90%;
+	margin: auto;
+	font-size: 4.5vw;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+/* Petite histoire */
+
+#petitehistoire h2 {
+	margin: 15% auto 15px 0px;
+	font-size: 8vw;
+}
+
+#petitehistoire img {
+	display: block;
+	width: 85%;
+	border-radius: 8px;
+	margin: 0px auto 4%;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+}
+
+#petitehistoire p {
 	width: 90%;
 	margin: auto;
 	font-size: 4.5vw;
@@ -366,24 +380,59 @@ footer {
 		margin: 60px auto 0px auto;
 		width: 3%;
 	}
+	
+	/* Le saviez-vous */
 
-	/* Nos Citronades */
+	#lesaviezvous, #qsm {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 25%;
+	}
 
-	#citronnade {
+	#lesaviezvous h2 {
+		margin: 5% 12% 15px 0px;
+		grid-row: 1;
+		grid-column: 2;
+		font-size: 45px;
+	}
+
+	#lesaviezvous p {
+		margin: 0;
+		margin-left: 87%;
+		grid-row: 2;
+		grid-column: 1;
+		width: 100%;
+		font-size: 20px;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
+	#lesaviezvous img {
+		border-radius: 8px;
+		margin: 0px 12% 4% 12%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 1;
+	}
+
+	/* Petite histoire */
+
+	#petitehistoire {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 10% 25%;
 		margin-top: 15%;
 	}
 
-	#citronnade h2, #qsm h2 {
+	#petitehistoire h2, #qsm h2 {
 		margin: 17% 0px 15px 23%;
 		grid-row: 1;
 		grid-column: 1;
 		font-size: 45px;
 	}
 
-	#citronnade img {
+	#petitehistoire img {
 		border-radius: 8px;
 		margin-right: 12%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
@@ -392,7 +441,7 @@ footer {
 		grid-column: 2;
 	}
 	
-	#citronnade p, #qsm p {
+	#petitehistoire p, #qsm p {
 		margin: 0;
 		grid-row: 2;
 		grid-column: 1;
