@@ -15,6 +15,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li, tabl
 	font: inherit;
 	vertical-align: baseline;
 	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
 }
 
 @font-face {
@@ -37,10 +38,6 @@ p {
 }
 
 .center {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -88,6 +85,7 @@ nav {
 	position: fixed;
 	height: 100%;
 	overflow: hidden;
+	padding-top: 15px;
 }
 
 .sidenav a {
@@ -152,7 +150,7 @@ nav {
 		opacity: 0;
 	}
 	50% {
-		opacity: 1;	
+		opacity: 0.75;
 	}
 	100% {
 		opacity: 0;
@@ -162,6 +160,9 @@ nav {
 /* Notre citronade */
 
 #citronnade h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 25% auto 15px;
 	font-size: 8vw;
 }
@@ -185,6 +186,9 @@ nav {
 /* Notre production */
 
 #production h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 15% auto 15px 0px;
 	font-size: 8vw;
 }
@@ -208,6 +212,9 @@ nav {
 /* Qui sommes-nous */
 
 #qsm h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 15% auto 15px 0px;
 	font-size: 8vw;
 }
@@ -383,9 +390,9 @@ footer {
 	}
 
 	#citronnade img {
-		width: 30%;
-		clear: both;
+		vertical-align: 100px;
 		float: right;
+		width: 30%;
 		border-radius: 8px;
 		margin-right: 12%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
@@ -402,16 +409,17 @@ footer {
 	/* Notre production */
 
 	#production h2 {
-		clear: both;
+		display: block;
 		float: right;
+		clear: both;
 		font-size: 45px;
-		margin-right: 21%;
-		margin-top: 8%;
+		margin: 0px 21% 0px 0px;
 	}
 
 	#production p {
-		clear: both;
+		display: block;
 		float: right;
+		clear: both;
 		width: 40%;
 		font-size: 20px;
 		margin-right: 12%;
@@ -420,35 +428,46 @@ footer {
 	}
 
 	#production img {
+		float: left;
+		display: block;
 		border-radius: 8px;
 		width: 30%;
 		margin-left: 12%;
-		margin-top: 19%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 	}
 
 	/* Qui sommes-nous */
 
 	#qsm h2 {
-		margin: 5% 0px 15px 23%;
+		clear: both;
+		display: block;
+		margin: 0px 0px 15px 23%;
 		font-size: 45px;
 	}
 
 	#qsm p {
+		clear: both;
+		display: inline-block;
+		margin: 2% 0px 0px 12%;
 		width: 40%;
 		font-size: 20px;
-		margin-left: 12%;
 		text-align: justify;
 		text-justify: inter-word;
 	}
 	   
-	.iframe-container iframe {
+	.iframe-container {
 		clear: both;
 		float: right;
-		margin-right: 12%;
 		border-radius: 8px;
-		width: 57%;
-		height: 57%;
+		width: 40%;
+		height: 40%;
+		margin-right: 8%;
+	}
+
+	.iframe-container iframe{
+		width: 90%;
+		height: 50%;
+		margin-left: 12%;
 	}
 
 	/* Labels */
@@ -471,8 +490,7 @@ footer {
 	}
 
 	#titreForm {
-		display: block;
-		font-size: 6vw;
+		font-size: 35px;
 	}
 
 	select {
