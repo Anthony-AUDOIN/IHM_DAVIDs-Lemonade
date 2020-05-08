@@ -4,6 +4,7 @@
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="icon" href="./images/icon.png">
 	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 	<title>David's Lemonade</title>
 </head>
@@ -17,14 +18,14 @@
 			</a>
 			<a href="#Contact" class="navbutton">Contact</a>
 			<a href="#AboutUs" class="navbutton">À propos</a>
-			<a href="#Agriculteur" class="navbutton">Nos agriculteurs</a>
+			<a href="#qsm" class="navbutton">Qui sommes-nous ?</a>
 			<a href="#History" class="navbutton">Notre histoire</a>
 			
 			<!-- Navigation Smarphone -->
 			<input type="checkbox" id="navbar-toggle-cbox"/><label for="navbar-toggle-cbox" data-toggle="sidenav"></label>
 			<div class="sidenav">
 				<a href="#History">Notre histoire</a>
-				<a href="#Agriculteur">Nos agriculteurs</a>
+				<a href="#qsm">Qui sommes-nous ?</a>
 				<a href="#AboutUs">À propos</a>
 				<a href="#Contact">Contact</a>
 			</div>
@@ -48,27 +49,34 @@
 
 			<!-- Notre Citronnade -->
 			<div id="citronnade">
-				<h2>Notre Citronnade</h2>
+				<h2 class="center">Notre Citronnade</h2>
 				<img src="./images/noscitronnades.png" alt="nos_citronnades">
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
 			</div>
 			<!-- Production -->
 			<div id="production">
-				<h2>Procédé de production</h2>
+				<h2 class="center">Procédé de production</h2>
 				<img src="./images/production.png" alt="notre_production">
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
+				<p>Notre citronnade adapte une fabrication artisanale, nous veillons avec soin chaque étape de production, de la récolte, la fermentation, la pression et l'embouteillage, pour vous donner une citronnade saine et de qualité. 
+					Les citrons sont sélectionnés avec soin par nos producteurs et sont exclusivement issus de l'agriculture biologique.
+					Elle est pressée à base de pure citron, afin de garder sa fraîcheur, ses nutriments et son goût 100% naturel.		
+				</p>
 			</div>
 			<!-- Qui sommes-nous ?-->
 			<div id="qsm">
-				<h2>Qui sommes-nous ?</h2>
-				<div class="iframe-container">
+				<h2 class="center">Qui sommes-nous ?</h2>
+				<div id="iframe-container">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662657.8011352355!2d-2.4344499598606864!3d46.13143484542259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1588445171561!5m2!1sfr!2sfr" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, quibusdam facilis expedita culpa maxime est blanditiis similique ipsam odio saepe veniam vel ullam, provident eaque laborum veritatis id. Eaque, molestiae.</p>
+				<p>L'association Combava est une association regroupant des producteurs indépendants d'agrumes du sud de la France.
+					Nous organisons des dégustations de jus privées dans toute la France et nos événements sont actuellement présents sur 15 villes : Poitiers, Civray-de-Touraine, La Rochelle, Pompignac, Arpajon-sur-Cère, Maringues, Biars-sur-Cère, Juvignac, Le Beausset, Besançon, Wintzenheim, Charleville-Mézières, Amiens et Paris.
+					Nous mettons en avant votre santé et le savoir-être des agriculteurs français.
+					Notre but est donc de vous apporter des boissons saines, de goût unique des différents agrumes frais et 100% naturel.
+					Nos producteurs et nos agriculteurs seront présents lors des dégustations pour vous donner des informations et répondre à toutes vos questions sur leurs produits.
+				</p>
 			</div>
-			<div id="labels">
-				<!-- <img src="./images/label1.png" alt="label1"> -->
-				<img src="./images/label2.png" alt="label2">
+			<div id="labels" class="center">
+				<img src="./images/label.png" alt="label">
 			</div>
 			<!-- Formulaire -->
 			<div id="formulaire">

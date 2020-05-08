@@ -160,9 +160,6 @@ nav {
 /* Notre citronade */
 
 #citronnade h2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	margin: 25% auto 15px;
 	font-size: 8vw;
 }
@@ -186,9 +183,6 @@ nav {
 /* Notre production */
 
 #production h2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	margin: 15% auto 15px 0px;
 	font-size: 8vw;
 }
@@ -212,9 +206,6 @@ nav {
 /* Qui sommes-nous */
 
 #qsm h2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	margin: 15% auto 15px 0px;
 	font-size: 8vw;
 }
@@ -227,13 +218,13 @@ nav {
 	text-justify: inter-word;
 }
 
-.iframe-container {
+#iframe-container {
 	overflow: hidden;
 	padding-top: 56.25%;
 	position: relative;
 }
    
-.iframe-container iframe {
+#iframe-container iframe {
 	border: 0;
 	border-radius: 8px;
 	width: 100%;
@@ -247,19 +238,16 @@ nav {
 
 #labels img{
 	width: 50%;
-	margin-left: 25%;
 	margin-top: 10%;
 }
 
 /* Formulaire */
 
-#formulaire {
-	text-align: center;
-}
-
 form {
 	margin: 60px 0 20px 0;
 	border: 0;
+	color: #777;
+	text-align: center;
 }
 
 #titreForm {
@@ -275,7 +263,6 @@ label {
 	font-weight: bold;
 	font-size: 20px;
 	margin-right: 10px;
-	color: #777;
 }
 
 input[type="text"], input[type="email"], select {
@@ -351,7 +338,6 @@ footer {
 		display: none;
 	}
 	
-	
 	@keyframes nav-transparent-border {
 		0% {
 			border-bottom: 3px solid rgba(190, 148, 12, 0);
@@ -383,23 +369,34 @@ footer {
 
 	/* Nos Citronades */
 
-	#citronnade h2 {
-		display: block;
+	#citronnade {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 25%;
+		margin-top: 15%;
+	}
+
+	#citronnade h2, #qsm h2 {
 		margin: 17% 0px 15px 23%;
+		grid-row: 1;
+		grid-column: 1;
 		font-size: 45px;
 	}
 
 	#citronnade img {
-		vertical-align: 100px;
-		float: right;
-		width: 30%;
 		border-radius: 8px;
 		margin-right: 12%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 2;
 	}
 	
-	#citronnade p {
-		width: 40%;
+	#citronnade p, #qsm p {
+		margin: 0;
+		grid-row: 2;
+		grid-column: 1;
+		width: 100%;
 		font-size: 20px;
 		margin-left: 12%;
 		text-align: justify;
@@ -408,74 +405,59 @@ footer {
 
 	/* Notre production */
 
+	#production, #qsm {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 25%;
+	}
+
 	#production h2 {
-		display: block;
-		float: right;
-		clear: both;
+		margin: 5% 12% 15px 0px;
+		grid-row: 1;
+		grid-column: 2;
 		font-size: 45px;
-		margin: 0px 21% 0px 0px;
 	}
 
 	#production p {
-		display: block;
-		float: right;
-		clear: both;
-		width: 40%;
+		margin: 0;
+		margin-left: 87%;
+		grid-row: 2;
+		grid-column: 1;
+		width: 100%;
 		font-size: 20px;
-		margin-right: 12%;
 		text-align: justify;
 		text-justify: inter-word;
 	}
 
 	#production img {
-		float: left;
-		display: block;
 		border-radius: 8px;
-		width: 30%;
-		margin-left: 12%;
+		margin: 0px 12% 4% 12%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 1;
 	}
 
 	/* Qui sommes-nous */
 
-	#qsm h2 {
-		clear: both;
-		display: block;
-		margin: 0px 0px 15px 23%;
-		font-size: 45px;
-	}
-
-	#qsm p {
-		clear: both;
-		display: inline-block;
-		margin: 2% 0px 0px 12%;
-		width: 40%;
-		font-size: 20px;
-		text-align: justify;
-		text-justify: inter-word;
-	}
-	   
-	.iframe-container {
-		clear: both;
-		float: right;
+	#qsm #iframe-container {
 		border-radius: 8px;
-		width: 40%;
-		height: 40%;
-		margin-right: 8%;
+		margin-left: 28%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 2;
 	}
 
-	.iframe-container iframe{
-		width: 90%;
-		height: 50%;
-		margin-left: 12%;
+	#qsm h2 {
+		margin-top: 10%;
 	}
 
 	/* Labels */
 
 	#labels img{
-		width: 50%;
-		margin-left: 25%;
-		margin-top: 10%;
+		width: 30%;
+		margin-top: 7%;
 	}
 
 	/* Formulaire */
