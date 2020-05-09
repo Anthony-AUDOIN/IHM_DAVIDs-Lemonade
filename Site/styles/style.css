@@ -371,7 +371,7 @@ footer p {
 
 	#lesaviezvous img, #production img {
 		border-radius: 8px;
-		margin: 0px 12% 4% 12%;
+		margin: 70px 12% 4% 12%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 		width: 60%;
 		grid-row: 1/6;
@@ -396,6 +396,7 @@ footer p {
 	#petitehistoire img {
 		border-radius: 8px;
 		margin-right: 12%;
+		margin-top: 70px;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 		width: 60%;
 		grid-row: 1/6;
@@ -413,11 +414,13 @@ footer p {
 		text-justify: inter-word;
 	}
 
-	#qsn #iframe-container {
+	#iframe-container {
 		border-radius: 8px;
-		margin-left: 28%;
+		margin-top: 70px;
+		margin-left: 27%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 		width: 60%;
+		height: 20%;
 		grid-row: 1/6;
 		grid-column: 2;
 	}
