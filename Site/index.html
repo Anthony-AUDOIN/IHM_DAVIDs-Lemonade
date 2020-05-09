@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	<i></i>
 	<header>
 		<!-- Navigation -->
 		<nav>
@@ -81,7 +82,7 @@
 			<!-- Formulaire -->
 			<div id="formulaire">
 				<form>
-					<label for="evenement" id="titreForm">Evenements :</label>
+					<label for="evenement" id="titreForm">Evenements</label>
 					<select name="Évenements" required title="Evenements" id="evenement">
 						<option value="">Choississez votre lieux</option>
 						<option value="op1">AMAP les Grand’Goules</option>
@@ -102,24 +103,25 @@
 					</select>
 
 					<div id="groupnom">
-						<label for="nom">Nom:</label>
+						<label for="nom">Nom *</label>
 						<input type="text" id="nom" name="nom" placeholder="Votre nom" pattern="[a-zA-Z]*" title="Ecrivez votre nom" required>
 					</div>
 					<div id="groupprenom">
-						<label for="prénom">Prénom:</label>
+						<label for="prénom">Prénom *</label>
 						<input type="text" id="prénom" name="prénom" placeholder="Votre prénom" pattern="[a-zA-Z]*" required>
 					</div>
 					<div id="groupemail">
-						<label for="email">Émail:</label>
-						<input type="text" id="email" name="email" placeholder="Votre Émail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+						<label for="email">Email *</label>
+						<input type="text" id="email" name="email" placeholder="Votre Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
 					</div>
 					<div id="grouptel">
-						<label for="tel">Téléphone:</label>
+						<label for="tel">Téléphone</label>
 						<input type="text" id="tel" name="tel" placeholder="Votre numéro de téléphone" pattern="[0-9]{10}">
 					</div>
-					<input type="checkbox" name="check_cg" id="cg" value="cg" required><label for="cg">J'accepte les conditions générales</label><br/>
+					<input type="checkbox" name="check_cg" id="cg" value="cg" required><label for="cg">J'accepte les conditions générales *</label><br/>
 
 					<input type="checkbox" name="check_notif" id="newsletter" value="newsletter"><label for="newsletter">J'accepte recevoir des informations pour les évenements à venir</label><br/>
+					<iframe id="formmap" src="https://www.google.com/maps/d/u/0/embed?mid=1fFVSVZHnI8AMsRp5qzru-MQwx8ooHsi0" width="640" height="480" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 
 					<input type="submit" value="Valider" id="buttonForm">
 				</form>
@@ -127,7 +129,15 @@
 		</div>
 	</main>
 	<footer>
-		<p>test</p>
+		<div class="wrapper"> 
+			<p>Combava</p>
+			<div id="reseau">
+				<img src="./images/facebook.png" alt="logo facebook">
+				<img src="./images/instagram.png" alt="logo instagram">
+				<img src="./images/twitter.png" alt="logo twitter">
+			</div>
+			<p>Copyright © 2020. Tous droits réservés.</p>
+		</div>
 	</footer>
 </body>
 </html>
