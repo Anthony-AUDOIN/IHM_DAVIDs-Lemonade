@@ -128,8 +128,7 @@ nav {
 }
 
 #fleches {
-	display: block;
-	margin: 12% auto 0px auto;
+	margin-top: 12%;
 	width: 15%;
 	animation-name: fleches-transparent;
 	animation-duration: 2.75s;
@@ -148,14 +147,14 @@ nav {
 	}
 }
 
-/* Le saviez-vous */
+/* Partie lesaviezvous + petitehistoire + production + qsm */
 
-#lesaviezvous h2 {
+#lesaviezvous h2, #petitehistoire h2, #production h2, #qsm h2 {
 	margin: 15% auto 15px 0px;
 	font-size: 8vw;
 }
 
-#lesaviezvous img {
+#lesaviezvous img, #petitehistoire img, #production img {
 	display: block;
 	width: 85%;
 	border-radius: 8px;
@@ -163,70 +162,9 @@ nav {
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 }
 
-#lesaviezvous p {
+#lesaviezvous p, #petitehistoire p, #production p, #qsm p {
 	width: 90%;
 	margin: auto;
-	font-size: 4.5vw;
-	text-align: justify;
-	text-justify: inter-word;
-}
-
-/* Petite histoire */
-
-#petitehistoire h2 {
-	margin: 15% auto 15px 0px;
-	font-size: 8vw;
-}
-
-#petitehistoire img {
-	display: block;
-	width: 85%;
-	border-radius: 8px;
-	margin: 0px auto 4%;
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-}
-
-#petitehistoire p {
-	width: 90%;
-	margin: auto;
-	font-size: 4.5vw;
-	text-align: justify;
-	text-justify: inter-word;
-}
-
-/* Notre production */
-
-#production h2 {
-	margin: 15% auto 15px 0px;
-	font-size: 8vw;
-}
-
-#production img {
-	display: block;
-	width: 85%;
-	border-radius: 8px;
-	margin: 0px auto 4%;
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-}
-
-#production p {
-	width: 90%;
-	margin: auto;
-	font-size: 4.5vw;
-	text-align: justify;
-	text-justify: inter-word;
-}
-
-/* Qui sommes-nous */
-
-#qsm h2 {
-	margin: 15% auto 15px 0px;
-	font-size: 8vw;
-}
-
-#qsm p {
-	width: 90%;
-	margin: 4% auto;
 	font-size: 4.5vw;
 	text-align: justify;
 	text-justify: inter-word;
@@ -256,10 +194,6 @@ nav {
 }
 
 /* Formulaire */
-
-#formulaire{
-	background-color: orange;
-}
 
 form {
 	margin: 60px 0 20px 0;
@@ -319,9 +253,6 @@ input #newletter {
 	padding-top: 15px;
 }
 
-#formmap{
-	margin-top: 25px;
-}
 /* Footer */
 
 footer {
@@ -329,13 +260,7 @@ footer {
 	width: 100%;
 }
 
-#reseau{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#reseau img{
+#reseau img {
 	width: 5%;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -405,16 +330,17 @@ footer p{
 	}
 
 	#fleches {
-		margin: 60px auto 0px auto;
+		margin-top: 60px;
 		width: 3%;
 	}
 	
 	/* Le saviez-vous */
 
-	#lesaviezvous, #qsm {
+	#lesaviezvous {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 10% 25%;
+		margin-top: 15%;
 	}
 
 	#lesaviezvous h2 {
@@ -446,11 +372,10 @@ footer p{
 
 	/* Petite histoire */
 
-	#petitehistoire {
+	#petitehistoire, #qsm {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 10% 25%;
-		margin-top: 15%;
 	}
 
 	#petitehistoire h2, #qsm h2 {
@@ -493,6 +418,7 @@ footer p{
 		grid-row: 1;
 		grid-column: 2;
 		font-size: 45px;
+		margin-top: 5%;
 	}
 
 	#production p {
