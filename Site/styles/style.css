@@ -15,7 +15,6 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, ol, ul, li, tabl
 	font: inherit;
 	vertical-align: baseline;
 	scroll-behavior: smooth;
-	-webkit-overflow-scrolling: touch;
 }
 
 @font-face {
@@ -39,8 +38,6 @@ p {
 
 .center {
 	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
@@ -133,8 +130,9 @@ nav {
 }
 
 #fleches {
-	margin-top: 12%;
-	width: 12.5%;
+	display: block;
+	margin: 8% auto 0 auto;
+	width: 10%;
 	animation-name: fleches-transparent;
 	animation-duration: 2.75s;
 	animation-iteration-count: infinite;
@@ -201,7 +199,7 @@ nav {
 
 /* Labels */
 
-#labels img{
+#labels img {
 	width: 50%;
 	margin-top: 10%;
 }
@@ -299,7 +297,7 @@ footer p {
 		float: right;
 		text-align: center;
 		font-size: 20px;
-		padding: 20px 2%;
+		padding: 20px 1%;
 		text-decoration: none;
 		color: black;
 		border-bottom: 3px solid transparent;
@@ -396,7 +394,7 @@ footer p {
 	#petitehistoire img {
 		border-radius: 8px;
 		margin-right: 12%;
-		margin-top: 70px;
+		margin-top: 100px;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 		width: 60%;
 		grid-row: 1/6;
@@ -416,11 +414,11 @@ footer p {
 
 	#iframe-container {
 		border-radius: 8px;
-		margin-top: 70px;
+		margin-top: 100px;
 		margin-left: 27%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 		width: 60%;
-		height: 20%;
+		height: 3%;
 		grid-row: 1/6;
 		grid-column: 2;
 	}
