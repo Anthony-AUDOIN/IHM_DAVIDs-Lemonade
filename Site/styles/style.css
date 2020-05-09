@@ -1,6 +1,6 @@
 /**************************************************************
 *															  *
-*					CSS de David's Lemonade					  *
+*			CSS (Mobile First) de David's Lemonade			  *
 *															  *
 ***************************************************************/
 
@@ -38,12 +38,16 @@ p {
 }
 
 .center {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-/* Nav bar */
+/* Navigation */
 
 nav {
 	background-color: rgba(238, 234, 176, 0.548);
@@ -97,8 +101,8 @@ nav {
 #logo {
 	display: block;
 	margin: auto;
-	margin-top: 3%;
-	width: 90%;
+	margin-top: 7%;
+	width: 75%;
 }
 
 #bouton {
@@ -112,7 +116,7 @@ nav {
 	padding: 10px;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 	transition: 0.3s;
-	font-size: 50px;
+	font-size: 45px;
 	font-weight: bold;
 	width: auto;
 }
@@ -123,13 +127,13 @@ nav {
 
 #landing p {
 	margin: 20px;
-	font-size: 40px;
+	font-size: 25px;
 	text-align: center;
 }
 
 #fleches {
 	margin-top: 12%;
-	width: 15%;
+	width: 12.5%;
 	animation-name: fleches-transparent;
 	animation-duration: 2.75s;
 	animation-iteration-count: infinite;
@@ -147,27 +151,35 @@ nav {
 	}
 }
 
-/* Partie lesaviezvous + petitehistoire + production + qsm */
+/* Partie lesaviezvous + petitehistoire + production + qsn */
 
-#lesaviezvous h2, #petitehistoire h2, #production h2, #qsm h2 {
+#lesaviezvous h2, #petitehistoire h2, #production h2, #qsn h2 {
 	margin: 15% auto 15px 0px;
-	font-size: 8vw;
+	font-size: 7vw;
 }
 
 #lesaviezvous img, #petitehistoire img, #production img {
 	display: block;
-	width: 85%;
+	width: 75%;
 	border-radius: 8px;
 	margin: 0px auto 4%;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 }
 
-#lesaviezvous p, #petitehistoire p, #production p, #qsm p {
+#lesaviezvous p, #petitehistoire p, #production p, #qsn p {
 	width: 90%;
 	margin: auto;
-	font-size: 4.5vw;
+	font-size: 4vw;
 	text-align: justify;
 	text-justify: inter-word;
+}
+
+#lesaviezvous h2 {
+	margin-top: 25%;
+}
+
+#qsn p {
+	margin-top: 4%;
 }
 
 #iframe-container {
@@ -198,38 +210,33 @@ nav {
 form {
 	margin: 60px 0 20px 0;
 	border: 0;
-	color: #777;
-	text-align: center;
 }
 
-#titreForm {
+span {
+	color: rgb(155, 45, 45);
+}
+
+form label {
 	display: block;
-	font-size: 6vw;
-}
-
-select {
-	color: #777;
-}
-
-#formulaire label {
-	display: inline-block;
 	font-weight: bold;
 	font-size: 20px;
-	margin-right: 10px;
+	color: #777;
 }
 
-
-input[type="text"], select{
+input[type="text"], select {
+	color: #777;
 	padding: 10px;
 	font-size: 20px;
-	margin-top: 15px;
-	margin-right: 20px;
-	margin-bottom: 15px;
+	margin: 5px 0 15px 0;
 	border: 2px solid #ddd;
 	border-radius: 5px;
 }
 
-#buttonForm {
+input[type="checkbox"] {
+	display: inline-block;
+}
+
+input[type="submit"] {
 	color: black;
 	text-decoration: none;
 	text-align: center;
@@ -237,39 +244,42 @@ input[type="text"], select{
 	border-radius: 12px;
 	background-color: rgba(238, 234, 176, 0.548);
 	opacity: 0.8;
-	padding: 12.5px 15px 12.5px 15px;
-	margin-top: 2%;
+	padding: 10px 15px 10px 15px;
+	margin-top: 4%;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 	transition: 0.3s;
-	font-size: 4.5vw;
+	font-size: 30px;
 	width: auto;
 }
 
-#buttonForm:hover {
+#formTextInline label {
+	display: inline-block;
+	margin-left: 0.5%;
+}
+
+input[type="submit"]:hover {
 	opacity: 1;
 }
 
-input #newletter {
-	padding-top: 15px;
+#labelnewsletter {
+	font-size: 17px;
 }
 
 /* Footer */
 
 footer {
-	background-color: rgb(238, 234, 176);
+	background-color: rgba(238, 234, 176, 0.85);
 	width: 100%;
 }
 
 #reseau img {
-	width: 5%;
+	width: 8%;
 	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-left:5px; 
-	padding-right:5px ;
-
+	padding: 0 5px 0 5px;
 }
 
-footer p{
+footer p {
+	padding-top: 10px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -280,7 +290,8 @@ footer p{
 
 @media screen and (min-width: 768px) {
 
-	/* Nav bar */
+	/* Navigation */
+
 	#navLogo {
 		width: 8%;
 		padding: 15px 25px 5px;
@@ -290,8 +301,8 @@ footer p{
 		display: block;
 		float: right;
 		text-align: center;
-		font-size: 23px;
-		padding: 20px 30px;
+		font-size: 20px;
+		padding: 20px 2%;
 		text-decoration: none;
 		color: black;
 		border-bottom: 3px solid transparent;
@@ -319,10 +330,6 @@ footer p{
 	#logo {
 		width: 25%;
 	}
-
-	#bouton {
-		width: 17%;
-	}
 	
 	#landing p {
 		margin: 20px;
@@ -334,7 +341,7 @@ footer p{
 		width: 3%;
 	}
 	
-	/* Le saviez-vous */
+	/* Le saviez-vous + production */
 
 	#lesaviezvous {
 		display: grid;
@@ -343,14 +350,14 @@ footer p{
 		margin-top: 15%;
 	}
 
-	#lesaviezvous h2 {
-		margin: 5% 12% 15px 0px;
+	#lesaviezvous h2, #production h2 {
+		margin: 10% 12% 15px 0px;
 		grid-row: 1;
 		grid-column: 2;
 		font-size: 45px;
 	}
 
-	#lesaviezvous p {
+	#lesaviezvous p, #production p {
 		margin: 0;
 		margin-left: 87%;
 		grid-row: 2;
@@ -361,7 +368,7 @@ footer p{
 		text-justify: inter-word;
 	}
 
-	#lesaviezvous img {
+	#lesaviezvous img, #production img {
 		border-radius: 8px;
 		margin: 0px 12% 4% 12%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
@@ -370,15 +377,15 @@ footer p{
 		grid-column: 1;
 	}
 
-	/* Petite histoire */
+	/* Petite histoire + qsn */
 
-	#petitehistoire, #qsm {
+	#petitehistoire, #production, #qsn {
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 10% 25%;
 	}
 
-	#petitehistoire h2, #qsm h2 {
+	#petitehistoire h2, #qsn h2 {
 		margin: 17% 0px 15px 23%;
 		grid-row: 1;
 		grid-column: 1;
@@ -394,7 +401,7 @@ footer p{
 		grid-column: 2;
 	}
 	
-	#petitehistoire p, #qsm p {
+	#petitehistoire p, #qsn p {
 		margin: 0;
 		grid-row: 2;
 		grid-column: 1;
@@ -405,45 +412,7 @@ footer p{
 		text-justify: inter-word;
 	}
 
-	/* Notre production */
-
-	#production, #qsm {
-		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-template-rows: 10% 25%;
-	}
-
-	#production h2 {
-		margin: 5% 12% 15px 0px;
-		grid-row: 1;
-		grid-column: 2;
-		font-size: 45px;
-		margin-top: 5%;
-	}
-
-	#production p {
-		margin: 0;
-		margin-left: 87%;
-		grid-row: 2;
-		grid-column: 1;
-		width: 100%;
-		font-size: 20px;
-		text-align: justify;
-		text-justify: inter-word;
-	}
-
-	#production img {
-		border-radius: 8px;
-		margin: 0px 12% 4% 12%;
-		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-		width: 60%;
-		grid-row: 1/6;
-		grid-column: 1;
-	}
-
-	/* Qui sommes-nous */
-
-	#qsm #iframe-container {
+	#qsn #iframe-container {
 		border-radius: 8px;
 		margin-left: 28%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
@@ -452,83 +421,22 @@ footer p{
 		grid-column: 2;
 	}
 
-	#qsm h2 {
+	#qsn h2 {
 		margin-top: 10%;
 	}
 
 	/* Labels */
 
-	#labels img{
+	#labels img {
 		width: 30%;
 		margin-top: 7%;
 	}
 
-	/* Formulaire */
-
-	#formulaire {
-		text-align: center;
-	}
-
-	form {
-		margin: 60px 0 20px 0;
-		border: 0;
-	}
-
-	#titreForm {
-		font-size: 35px;
-	}
-
-	select {
-		color: #777;
-	}
-
-	label {
-		font-weight: bold;
-		font-size: 20px;
-		margin-right: 10px;
-		color: #777;
-	}
-
-	input[type="text"], input[type="email"], select {
-		padding: 10px;
-		font-size: 20px;
-		margin-top: 15px;
-		margin-right: 20px;
-		margin-bottom: 15px;
-		border: 2px solid #ddd;
-		border-radius: 5px;
-	}
-
-	#buttonForm {
-		color: black;
-		text-decoration: none;
-		text-align: center;
-		border: 3px solid orange;
-		border-radius: 12px;
-		background-color: rgba(238, 234, 176, 0.548);
-		opacity: 0.8;
-		padding: 12.5px 15px 12.5px 15px;
-		margin-top: 2%;
-		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-		transition: 0.3s;
-		font-size: 30px;
-		width: auto;
-	}
-
-	#buttonForm:hover {
-		opacity: 1;
-	}
-
-	input #newletter {
-		padding-top: 15px;
-	}
-
 	/* Footer */
 
-	footer {
-		background-color: rgb(238, 234, 176);
-		width: 100%;
-		color: black;
+	#reseau img {
+		width: 3%;
+		padding-left: 10px; 
+		padding-right: 10px;
 	}
-
 }

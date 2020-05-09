@@ -14,10 +14,10 @@
 	<header>
 		<!-- Navigation -->
 		<nav>
-			<a href="#content">
+			<a href="http://www.combava.com">
 				<img src="./images/logovertical.png" alt="Logo" id="navLogo">
 			</a>
-			<a href="#qsm" class="navbutton">Qui sommes-nous ?</a>
+			<a href="#qsn" class="navbutton" id="item1">Qui sommes-nous ?</a>
 			<a href="#production" class="navbutton">Production</a>
 			<a href="#petitehistoire" class="navbutton">Petite histoire</a>
 			<a href="#lesaviezvous" class="navbutton">Le saviez-vous ?</a>
@@ -31,7 +31,7 @@
 				<a href="#lesaviezvous">Le saviez-vous ?</a>
 				<a href="#petitehistoire">Petite histoire</a>
 				<a href="#production">Production</a>
-				<a href="#qsm">Qui sommes-nous ?</a>
+				<a href="#qsn">Qui sommes-nous ?</a>
 			</div>
 		</nav>
 	</header>
@@ -45,7 +45,7 @@
 				<div class="center">
 					<a href="#formulaire" id="bouton">Participez ici</a>
 				</div>
-				<a href="#citronnade" class="center">
+				<a href="#lesaviezvous" class="center">
 					<img src="./images/fleches.png" alt="fleches" id="fleches">
 				</a>
 			</div>
@@ -79,10 +79,10 @@
 				</p>
 			</div>
 			<!-- Qui sommes-nous ?-->
-			<div id="qsm">
+			<div id="qsn">
 				<h2 class="center">Qui sommes-nous ?</h2>
 				<div id="iframe-container">
-					<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fFVSVZHnI8AMsRp5qzru-MQwx8ooHsi0" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+					<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fFVSVZHnI8AMsRp5qzru-MQwx8ooHsi0"></iframe>
 				</div>
 				<p>L'association Combava est une association regroupant des producteurs indépendants d'agrumes du sud de la France.
 					Nous organisons des dégustations de jus privées dans toute la France et nos événements sont actuellement présents sur 15 villes.
@@ -94,10 +94,11 @@
 			<div id="labels" class="center">
 				<img src="./images/label.png" alt="label">
 			</div>
+
 			<!-- Formulaire -->
-			<div id="formulaire">
+			<div class="center"> 
 				<form>
-					<label for="evenement" id="titreForm">Evenements</label>
+					<label for="evenement">Évenements <span>*</span></label>
 					<select name="Évenements" required title="Evenements" id="evenement">
 						<option value="">Choississez votre lieux</option>
 						<option value="op1">AMAP les Grand’Goules</option>
@@ -116,42 +117,41 @@
 						<option value="op14">Bio c' Bon</option>
 						<option value="op15">Les Comptoirs de la Bio</option>
 					</select>
-
-					<div id="groupnom">
-						<label for="nom">Nom *</label>
-						<input type="text" id="nom" name="nom" placeholder="Votre nom" pattern="[a-zA-Z]*" title="Ecrivez votre nom" required>
+	
+					<label for="nom">Nom <span>*</span></label>
+					<input type="text" id="nom" name="nom" placeholder="Votre nom" pattern="[a-zA-Z]*" title="Écrivez votre nom" required>
+			
+					<label for="prénom">Prénom <span>*</span></label>	
+					<input type="text" id="prénom" name="prénom" placeholder="Votre prénom" pattern="[a-zA-Z]*" required>
+		
+					<label for="email">Émail <span>*</span></label>
+					<input type="text" id="email" name="email" placeholder="Votre Émail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+							
+					<label for="tel">Téléphone <span>*</span></label>
+					<input type="text" id="tel" name="tel" placeholder="Votre numéro de téléphone" pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$">
+	
+					<div id="formTextInline">
+						<input type="checkbox" name="check_cg" id="cg" value="cg" required>
+						<label for="cg">J'accepte les conditions générales <span>*</span></label><br/>
+						<input type="checkbox" name="check_notif" id="newsletter" value="newsletter">
+						<label for="newsletter" id="labelnewsletter">Recevoir informations évenements à venir</label>
 					</div>
-					<div id="groupprenom">
-						<label for="prénom">Prénom *</label>
-						<input type="text" id="prénom" name="prénom" placeholder="Votre prénom" pattern="[a-zA-Z]*" required>
+					<div class="center"> 
+						<input type="submit" value="Valider">
 					</div>
-					<div id="groupemail">
-						<label for="email">Email *</label>
-						<input type="text" id="email" name="email" placeholder="Votre Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
-					</div>
-					<div id="grouptel">
-						<label for="tel">Téléphone</label>
-						<input type="text" id="tel" name="tel" placeholder="Votre numéro de téléphone" pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$">
-					</div>
-					<input type="checkbox" name="check_cg" id="cg" value="cg" required><label for="cg">J'accepte les conditions générales *</label><br/>
-
-					<input type="checkbox" name="check_notif" id="newsletter" value="newsletter"><label for="newsletter">J'accepte recevoir des informations pour les évenements à venir</label><br/>
-
-					<input type="submit" value="Valider" id="buttonForm">
 				</form>
-			</div>
+			</div>	
 		</div>
 	</main>
+	
 	<footer>
-		<div class="wrapper"> 
-			<p>Combava</p>
-			<div id="reseau" class="center">
-				<img src="./images/facebook.png" alt="logo facebook">
-				<img src="./images/instagram.png" alt="logo instagram">
-				<img src="./images/twitter.png" alt="logo twitter">
-			</div>
-			<p>Copyright © 2020. Tous droits réservés.</p>
+		<p>Combava</p>
+		<div id="reseau" class="center">
+			<img src="./images/facebook.png" alt="logo facebook">
+			<img src="./images/instagram.png" alt="logo instagram">
+			<img src="./images/twitter.png" alt="logo twitter">
 		</div>
+		<p>Copyright © 2020. Tous droits réservés.</p>
 	</footer>
 </body>
 </html>
