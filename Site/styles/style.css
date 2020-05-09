@@ -60,25 +60,13 @@ nav {
 	display: none;
 }
 
-<<<<<<< HEAD
 #navbar-toggle-cbox {
 	display: none;
-=======
-#navbar-toggle-cbox{
-    display: none;
->>>>>>> 2b3537c8f79c52e3024ea7f34b8edd9105981adf
 }
 
 #navbar-toggle-cbox + label img{
 	float: right;
-<<<<<<< HEAD
-	background-image: url('../images/burger.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	height: 50px;
-=======
     height: 50px;
->>>>>>> 2b3537c8f79c52e3024ea7f34b8edd9105981adf
 	width: 50px;
 }
 
@@ -289,7 +277,7 @@ select {
 	color: #777;
 }
 
-label {
+#formulaire label {
 	display: inline-block;
 	font-weight: bold;
 	font-size: 20px;
