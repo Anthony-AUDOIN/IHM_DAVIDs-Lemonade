@@ -259,11 +259,6 @@ input[type="submit"] {
 	width: auto;
 }
 
-#formTextInline label {
-	display: inline-block;
-	margin-left: 0.5%;
-}
-
 .inlinecase {
 	display: flex;
 	flex-direction: row;
@@ -276,7 +271,7 @@ input[type="submit"]:hover {
 }
 
 #information input {
-	width: 90%;
+	width: 84%;
 }
 
 /* Footer */
@@ -298,10 +293,6 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
-	
-	#lesaviezvous, #petitehistoire, #production, #qsn {
-		margin-bottom: 10%;
-	}
 	
 	/* Navigation */
 
@@ -362,6 +353,10 @@ footer p {
 	}
 	
 	/* Le saviez-vous + production */
+
+	#lesaviezvous, #petitehistoire, #production, #qsn {
+		margin-bottom: 10%;
+	}
 
 	#lesaviezvous {
 		display: grid;
