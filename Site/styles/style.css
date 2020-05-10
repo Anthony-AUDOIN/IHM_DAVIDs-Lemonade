@@ -299,6 +299,10 @@ footer p {
 
 @media screen and (min-width: 768px) {
 	
+	#lesaviezvous, #petitehistoire, #production, #qsn {
+		margin-bottom: 10%;
+	}
+	
 	/* Navigation */
 
 	#navLogo {
@@ -376,7 +380,7 @@ footer p {
 	#lesaviezvous p, #production p {
 		margin: 0;
 		margin-left: 87%;
-		grid-row: 2;
+		grid-row: 3;
 		grid-column: 1;
 		width: 100%;
 		font-size: 20px;
@@ -402,7 +406,7 @@ footer p {
 	}
 	
 	#petitehistoire h2, #qsn h2 {
-		margin: 17% 0px 15px 23%;
+		margin: 10% 0px 15px 18%;
 		grid-row: 1;
 		grid-column: 1;
 		font-size: 45px;
@@ -420,7 +424,7 @@ footer p {
 		
 	#petitehistoire p, #qsn p {
 		margin: 0;
-		grid-row: 2;
+		grid-row: 3;
 		grid-column: 1;
 		width: 100%;
 		font-size: 20px;
@@ -444,6 +448,10 @@ footer p {
 		margin-top: 10%;
 	}
 
+	#qsn {
+		margin-bottom: 0%;
+	}
+	
 	/* Labels */
 
 	#labels img {
@@ -458,8 +466,16 @@ footer p {
 		width: 100%;
 	}
 	
+	.center form {
+		font-size: 150%;
+	}
+	
 	select {
-		width: 110%;
+		width: 107%;
+	}
+	
+	#formTextInline {
+		font-size: 80%;;
 	}
 
 	/* Footer */
