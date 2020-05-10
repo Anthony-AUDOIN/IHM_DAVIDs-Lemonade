@@ -154,29 +154,21 @@ nav {
 
 /* Partie lesaviezvous + petitehistoire + production + qsn */
 
-#lesaviezvous, #petitehistoire, #production, #qsn {
-	display: flex;
-	flex-direction: column;
-	order: 0;
-	margin-top: 10%;
-	margin-bottom: 10%;
-}
-
 #lesaviezvous h2, #petitehistoire h2, #production h2, #qsn h2 {
-	margin: 15% auto 6% 0px;
+	margin: 15% auto 15px 0px;
 	font-size: 8vw;
 }
 
 #lesaviezvous img, #petitehistoire img, #production img {
+	display: block;
 	width: 75%;
 	border-radius: 8px;
-	margin: 5% auto 5% auto;
+	margin: 0px auto 4%;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-	order: 1;
 }
 
 #lesaviezvous p, #petitehistoire p, #production p, #qsn p {
-	width: 104%;
+	width: 90%;
 	margin: auto;
 	font-size: 5vw;
 	text-align: justify;
@@ -187,14 +179,8 @@ nav {
 	margin-top: 25%;
 }
 
-#qsn {
-	flex-direction: column-reverse;
-	order: 1;
-}
-
 #qsn p {
 	margin-top: 4%;
-	margin-bottom: 4%;
 }
 
 #iframe-container {
@@ -306,17 +292,12 @@ footer {
 }
 
 footer p {
-	padding-top: 1%;
+	padding-top: 10px;
 	text-align: center;
 	font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
-	
-	#lesaviezvous, #petitehistoire, #production, #qsn {
-		margin-top: 20%;
-		padding-top: 10%;
-	}
 	
 	/* Navigation */
 
@@ -330,7 +311,7 @@ footer p {
 		float: right;
 		text-align: center;
 		font-size: 20px;
-		padding: 20px 2%;
+		padding: 20px 1%;
 		text-decoration: none;
 		color: black;
 		border-bottom: 3px solid transparent;
@@ -378,94 +359,97 @@ footer p {
 	
 	/* Le saviez-vous + production */
 
-	#lesaviezvous, #production {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		align-items: flex-end;
-		padding: auto;
+	#lesaviezvous {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 25%;
+		margin-top: 15%;
 	}
 	
-	#lesaviezvouscontent + #productioncontent{
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		margin-left: 3%;
-	}
-
 	#lesaviezvous h2, #production h2 {
-		margin: 1%;
+		margin: 10% 12% 15px 0px;
+		grid-row: 1;
+		grid-column: 2;
 		font-size: 45px;
 	}
-
+	
 	#lesaviezvous p, #production p {
-		margin: 0%;
-		font-size: 23px;
+		margin: 0;
+		margin-left: 87%;
+		grid-row: 2;
+		grid-column: 1;
 		width: 100%;
+		font-size: 20px;
+		text-align: justify;
+		text-justify: inter-word;
 	}
-
+	
 	#lesaviezvous img, #production img {
-		border-radius: 3%;
-		margin: 4% 2% 0 1%;
+		border-radius: 8px;
+		margin: 70px 12% 4% 12%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-		width: 45%;
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 1;
 	}
-
+	
 	/* Petite histoire + qsn */
-
-	#petitehistoire, #qsn {
-		padding-bottom: 8;
-		position: relative;
-		display: flex;
-		flex-direction: row-reverse;
-		align-items: flex-end;
-		padding: auto;
-		order: 1;
+	
+	#petitehistoire, #production, #qsn {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 25%;
 	}
 	
-	#petitehistoire {
-		padding-bottom: 15%;
-	}
-	
-	#petitehistoirecontent + #qsncontent {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		margin-left: 3%;
-	}
-
 	#petitehistoire h2, #qsn h2 {
-		margin: 1%;
+		margin: 17% 0px 15px 23%;
+		grid-row: 1;
+		grid-column: 1;
 		font-size: 45px;
 	}
-
+	
 	#petitehistoire img {
-		border-radius: 3%;
-		margin: 4% 1% 0 2%;
+		border-radius: 8px;
+		margin-right: 12%;
+		margin-top: 100px;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-		width: 40%;
+		width: 60%;
+		grid-row: 1/6;
+		grid-column: 2;
 	}
-	
+		
 	#petitehistoire p, #qsn p {
-		margin: 0%;
-		font-size: 23px;
+		margin: 0;
+		grid-row: 2;
+		grid-column: 1;
 		width: 100%;
+		font-size: 20px;
+		margin-left: 12%;
+		text-align: justify;
+		text-justify: inter-word;
 	}
 	
-	#qsn p {
-		width: 95%;
+	#iframe-container {
+		border-radius: 8px;
+		margin-top: 100px;
+		margin-left: 27%;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+		width: 60%;
+		height: 3%;
+		grid-row: 1/6;
+		grid-column: 2;
+	}
+	
+	#qsn h2 {
+		margin-top: 10%;
 	}
 
-	#iframe-container {
-		padding: 200px;
-		margin: 0%;
-		border-radius: 3%;
-		width: 90%;
-		height: 60%;
-	}
-	
-	#iframe-container iframe {
-		height: 120%;
+	/* Labels */
+
+	#labels img {
+		width: 30%;
+		margin-top: 10%;
+		margin-bottom: 5%;
 	}
 
 	/* Formulaire */
@@ -478,18 +462,10 @@ footer p {
 		width: 110%;
 	}
 
-	/* Labels */
-
-	#labels img {
-		width: 30%;
-		margin-top: 10%;
-		margin-bottom: 5%;
-	}
-
 	/* Footer */
 
 	#reseau img {
 		width: 3%;
-		margin: 1%;
+		margin: 10px 10px 0 10px;
 	}
 }
