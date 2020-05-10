@@ -100,7 +100,7 @@ nav {
 	position: relative;
 	display: block;
 	margin: auto;
-	margin-top: 13%;
+	margin-top: 16%;
 	width: 60%;
 }
 
@@ -115,7 +115,7 @@ nav {
 	padding: 3%;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
 	transition: 0.3s;
-	font-size: 150%;
+	font-size: 140%;
 	font-weight: bold;
 	width: auto;
 }
@@ -154,21 +154,29 @@ nav {
 
 /* Partie lesaviezvous + petitehistoire + production + qsn */
 
+#lesaviezvous, #petitehistoire, #production, #qsn {
+	display: flex;
+	flex-direction: column;
+	order: 0;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
 #lesaviezvous h2, #petitehistoire h2, #production h2, #qsn h2 {
-	margin: 15% auto 15px 0px;
+	margin: 15% auto 6% 0px;
 	font-size: 8vw;
 }
 
 #lesaviezvous img, #petitehistoire img, #production img {
-	display: block;
 	width: 75%;
 	border-radius: 8px;
-	margin: 0px auto 4%;
+	margin: 5% auto 5% auto;
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
+	order: 1;
 }
 
 #lesaviezvous p, #petitehistoire p, #production p, #qsn p {
-	width: 90%;
+	width: 104%;
 	margin: auto;
 	font-size: 5vw;
 	text-align: justify;
@@ -179,8 +187,14 @@ nav {
 	margin-top: 25%;
 }
 
+#qsn {
+	flex-direction: column-reverse;
+	order: 1;
+}
+
 #qsn p {
 	margin-top: 4%;
+	margin-bottom: 4%;
 }
 
 #iframe-container {
@@ -298,7 +312,12 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
-
+	
+	#lesaviezvous, #petitehistoire, #production, #qsn {
+		margin-top: 20%;
+		padding-top: 10%;
+	}
+	
 	/* Navigation */
 
 	#navLogo {
@@ -337,115 +356,134 @@ footer p {
 	/* Landing */
 
 	#logo {
-		width: 25%;
+		width: 24%;
+		margin-top: 6%;
 	}
 
 	#bouton {
-		font-size: 45px;
+		font-size: 235%;
+		padding: 1%;
 	}
 	
 	#landing p {
-		margin: 20px;
-		font-size: 3.5vw;
+		font-size: 240%;
+		margin: 0%;
+		padding: 1%;
 	}
 
 	#fleches {
-		margin-top: 60px;
-		width: 3%;
+		margin-top: 2%;
+		width: 4%;
 	}
 	
 	/* Le saviez-vous + production */
 
-	#lesaviezvous {
-		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-template-rows: 10% 25%;
-		margin-top: 15%;
+	#lesaviezvous, #production {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		padding: auto;
+	}
+	
+	#lesaviezvouscontent + #productioncontent{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 3%;
 	}
 
 	#lesaviezvous h2, #production h2 {
-		margin: 10% 12% 15px 0px;
-		grid-row: 1;
-		grid-column: 2;
+		margin: 1%;
 		font-size: 45px;
 	}
 
 	#lesaviezvous p, #production p {
-		margin: 0;
-		margin-left: 87%;
-		grid-row: 2;
-		grid-column: 1;
+		margin: 0%;
+		font-size: 23px;
 		width: 100%;
-		font-size: 20px;
-		text-align: justify;
-		text-justify: inter-word;
 	}
 
 	#lesaviezvous img, #production img {
-		border-radius: 8px;
-		margin: 70px 12% 4% 12%;
+		border-radius: 3%;
+		margin: 4% 2% 0 1%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-		width: 60%;
-		grid-row: 1/6;
-		grid-column: 1;
+		width: 45%;
 	}
 
 	/* Petite histoire + qsn */
 
-	#petitehistoire, #production, #qsn {
-		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-template-rows: 10% 25%;
+	#petitehistoire, #qsn {
+		padding-bottom: 8;
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: flex-end;
+		padding: auto;
+		order: 1;
+	}
+	
+	#petitehistoire {
+		padding-bottom: 15%;
+	}
+	
+	#petitehistoirecontent + #qsncontent {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 3%;
 	}
 
 	#petitehistoire h2, #qsn h2 {
-		margin: 17% 0px 15px 23%;
-		grid-row: 1;
-		grid-column: 1;
+		margin: 1%;
 		font-size: 45px;
 	}
 
 	#petitehistoire img {
-		border-radius: 8px;
-		margin-right: 12%;
-		margin-top: 100px;
+		border-radius: 3%;
+		margin: 4% 1% 0 2%;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-		width: 60%;
-		grid-row: 1/6;
-		grid-column: 2;
+		width: 40%;
 	}
 	
 	#petitehistoire p, #qsn p {
-		margin: 0;
-		grid-row: 2;
-		grid-column: 1;
+		margin: 0%;
+		font-size: 23px;
 		width: 100%;
-		font-size: 20px;
-		margin-left: 12%;
-		text-align: justify;
-		text-justify: inter-word;
+	}
+	
+	#qsn p {
+		width: 95%;
 	}
 
 	#iframe-container {
-		border-radius: 8px;
-		margin-top: 100px;
-		margin-left: 27%;
-		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);
-		width: 60%;
-		height: 3%;
-		grid-row: 1/6;
-		grid-column: 2;
+		padding: 200px;
+		margin: 0%;
+		border-radius: 3%;
+		/*box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0 ,0 ,0, 0.19);*/
+		width: 90%;
+		height: 60%;
+	}
+	
+	#iframe-container iframe {
+		height: 120%;
 	}
 
-	#qsn h2 {
-		margin-top: 10%;
+	/* Formulaire */
+	
+	#information input {
+		width: 100%;
+	}
+	
+	select {
+		width: 110%;
 	}
 
 	/* Labels */
 
 	#labels img {
 		width: 30%;
-		margin-top: 5%;
+		margin-top: 10%;
 		margin-bottom: 5%;
 	}
 
