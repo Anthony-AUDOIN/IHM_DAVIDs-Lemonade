@@ -1,5 +1,4 @@
 # IHM_DAVIDs-Lemonade
-_(juste en dessous des badges sympatiques à placer)_
 
 ![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)
 
